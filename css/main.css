@@ -47,6 +47,10 @@ body {
   text-transform: uppercase;
   font-size: 26px;
   font-weight: 600;
+  overflow: hidden;
+}
+.main-container .preloader h1 span {
+  display: block;
 }
 .main-container .preloader .solid-bg {
   position: absolute;
@@ -215,4 +219,8 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.hide {
+  opacity: 0;
 }/*# sourceMappingURL=main.css.map */

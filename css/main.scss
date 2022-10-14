@@ -54,6 +54,10 @@ body {
             text-transform: uppercase;
             font-size: 26px;
             font-weight: 600;
+            overflow: hidden;
+            span {
+                display: block;
+            }
         }
         
         .solid-bg {
@@ -63,6 +67,11 @@ body {
             height: inherit;
             width: inherit;
             background-color: $orange-red;
+            // clip codes below for animation purposes
+            // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            // opacity: 0;
+            // transform: translateY(1000px);
         }
 
         .images {
@@ -249,4 +258,8 @@ body {
             }
         }
     }
+}
+
+.hide {
+    opacity: 0;
 }
