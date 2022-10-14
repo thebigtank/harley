@@ -26,7 +26,7 @@ body {
   align-items: center;
 }
 .main-container .content {
-  max-width: 390px;
+  max-width: 414px;
   width: 414px;
   height: 844px;
   position: relative;
@@ -72,20 +72,18 @@ body {
      object-position: center;
 }
 .main-container .app {
+  background-color: #15191e;
   color: #fff;
   height: inherit;
   width: inherit;
   position: absolute;
-  background-color: #15191e;
 }
 .main-container .app__header {
   padding: 40px 0;
 }
-.main-container .app__header .wrapper {
+.main-container .app__header .row {
   padding: 0 35px;
   box-sizing: border-box;
-}
-.main-container .app__header .row {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -118,11 +116,12 @@ body {
   background-color: #fff;
 }
 .main-container .app__cta {
+  width: inherit;
   padding: 40px 0;
   position: relative;
   padding-top: 140px;
 }
-.main-container .app__cta .wrapper {
+.main-container .app__cta .row {
   padding: 0 35px;
   box-sizing: border-box;
 }
@@ -163,18 +162,27 @@ body {
   height: 20px;
 }
 .main-container .app__footer {
-  overflow-x: hidden;
+  width: inherit;
+  position: absolute;
   bottom: 0;
+  overflow: hidden;
 }
-.main-container .app__footer .wrapper {
+.main-container .app__footer .row {
   padding: 0 35px;
-  padding-right: 0;
   box-sizing: border-box;
+}
+.main-container .app__footer .row:last-child {
+  padding: 0;
+}
+.main-container .app__footer hr {
+  margin: 0;
+  margin-bottom: 40px;
 }
 .main-container .app__footer .slider {
   width: 600px;
   display: flex;
   gap: 25px;
+  margin-bottom: 40px;
 }
 .main-container .app__footer .slider .item {
   max-width: 155px;
@@ -183,6 +191,28 @@ body {
   line-height: 26px;
   opacity: 0.5;
 }
+.main-container .app__footer .slider .item p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
 .main-container .app__footer .slider .item.active {
   opacity: 1;
+}
+.main-container .app__footer .slider.images {
+  margin-bottom: 0;
+  gap: 0;
+}
+.main-container .app__footer .slider .image {
+  overflow: hidden;
+  width: 130px;
+  height: 130px;
+}
+.main-container .app__footer .slider .image img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=main.css.map */

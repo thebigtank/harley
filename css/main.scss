@@ -32,7 +32,7 @@ body {
     }
 
     .content {
-        max-width: 390px;
+        max-width: 414px;
         width: 414px;
         height: 844px;
         position: relative;
@@ -81,20 +81,18 @@ body {
     }
 
     .app {
+        background-color: $dark-01;
         color: #fff;
         height: inherit;
         width: inherit;
         position: absolute;
-        background-color: $dark-01;
 
         &__header {
             padding: 40px 0;
-            .wrapper {
-                padding: 0 35px;
-                box-sizing: border-box;
-            }
 
             .row {
+                padding: 0 35px;
+                box-sizing: border-box;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -131,10 +129,11 @@ body {
         }
 
         &__cta {
+            width: inherit;
             padding: 40px 0;
             position: relative;
             padding-top: 140px;
-            .wrapper {
+            .row {
                 padding: 0 35px;
                 box-sizing: border-box;
             }
@@ -188,20 +187,31 @@ body {
         }
 
         &__footer {
-            overflow-x: hidden;
-            // position: absolute;
+            width: inherit;
+            position: absolute;
             bottom: 0;
+            overflow: hidden;
 
-            .wrapper {
+            .row {
                 padding: 0 35px;
-                padding-right: 0;
                 box-sizing: border-box;
+
+                &:last-child {
+                    padding: 0;
+                }
+            }
+
+
+            hr {
+                margin: 0;
+                margin-bottom: 40px;
             }
 
             .slider {
                 width: 600px;
                 display: flex;
                 gap: 25px;
+                margin-bottom: 40px;
                 .item {
                     max-width: 155px;
                     text-transform: uppercase;
@@ -209,8 +219,31 @@ body {
                     line-height: 26px;
                     opacity: 0.5;
 
+                    p {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+
                     &.active {
                         opacity: 1;
+                    }
+                }
+
+                &.images {
+                    margin-bottom: 0;
+                    gap: 0;
+                }
+
+                .image {
+                    overflow: hidden;
+                    width: 130px;
+                    height: 130px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
                     }
                 }
             }
