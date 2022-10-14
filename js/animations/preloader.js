@@ -14,7 +14,7 @@ export default function animatePreloader() {
         },
         {
             // ease: "power4.inOut",
-            duration: 1.6,
+            duration: 1,
             y: 0
         });
 
@@ -23,21 +23,21 @@ export default function animatePreloader() {
             y: 50,
         },
         {
-            duration: 1.6,
+            duration: 1.4,
             y: 0
-        });
+        },'+=0.2');
 
         tl.to(solid_bg, 
         {
             y: -850,
-            duration: .8
+            duration: 1
         });
 
         tl.to(title,
         {
             y: -50,
-            duration: 1.8
-        });
+            duration: 2
+        }, '-=0.95');
     }
 
 }
