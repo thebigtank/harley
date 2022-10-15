@@ -142,8 +142,7 @@ export default function animatePreloader() {
         },
         {
             'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-            duration: .74,
-            // ease: "power2.inOut" 45px
+            duration: .74
         },'+=0.2');
         
 
@@ -155,6 +154,8 @@ export default function animatePreloader() {
         let app_cta = app_screen.querySelector('.app__cta');
         let cta_title = app_cta.querySelectorAll('.col .title');
         let cta_title_items = app_cta.querySelectorAll('.col .title span');
+        let btn_primary = app_cta.querySelector('.btn-group .btn.primary');
+        let btn_icon = app_cta.querySelector('.btn-group .btn.icon');
 
         tl.fromTo(cta_title, 
         {
@@ -162,8 +163,7 @@ export default function animatePreloader() {
         },
         {
             y: 0,
-            duration: .9,
-            // ease: "power2.inOut" 45px
+            duration: .7,
         },'-=1.05');
 
         tl.fromTo(cta_title_items, 
@@ -172,9 +172,50 @@ export default function animatePreloader() {
         },
         {
             'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-            duration: .9,
-            // ease: "power2.inOut" 45px
+            duration: .7
         },'-=1.05');
+
+        tl.fromTo(btn_primary, 
+        {
+            'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
+        },
+        {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            duration: .74
+        },'-=0.7');
+
+        tl.fromTo(btn_icon, 
+        {
+            'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
+        },
+        {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            duration: .74
+        },'-=0.4');
+
+        // Animate the footer
+        let app_footer = app_screen.querySelector('.app__footer');
+        let line = app_footer.querySelector('.row hr');
+
+        // tl.fromTo(line,
+        // {
+        //     x: -570
+        // },
+        // {
+        //     x: 0,
+        //     duration: .7,
+        // },'-=1.05');
+
+        tl.fromTo(line, 
+        {
+            'clip-path': 'polygon(0% 100%, 0% 100%, 0% 0%, 0% 0%)',
+        },
+        {
+            'clip-path': 'polygon(0px 100%, 100% 100%, 100% 0%, 0% 0%)',
+            duration: .9
+        },'-=1.4');
+
+
 
 
 

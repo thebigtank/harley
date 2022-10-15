@@ -172,7 +172,6 @@ body {
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  opacity: 0;
 }
 .main-container .app__footer .row {
   padding: 0 35px;
