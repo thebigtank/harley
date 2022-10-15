@@ -36,6 +36,7 @@ body {
         width: 414px;
         height: 844px;
         position: relative;
+        overflow: hidden;
     }
 
     .preloader {
@@ -54,7 +55,7 @@ body {
             text-transform: uppercase;
             font-size: 26px;
             font-weight: 600;
-            overflow: hidden;
+            overflow: hidden; // for animation purposes only
             span {
                 display: block;
             }
@@ -67,11 +68,6 @@ body {
             height: inherit;
             width: inherit;
             background-color: $orange-red;
-            // clip codes below for animation purposes
-            // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-            // clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-            // opacity: 0;
-            // transform: translateY(1000px);
         }
 
         .images {
@@ -79,6 +75,7 @@ body {
             z-index: 1;
             height: inherit;
             width: inherit;
+            
             img {
                 position: absolute;
                 height: 100%;
@@ -95,9 +92,11 @@ body {
         height: inherit;
         width: inherit;
         position: absolute;
+        // opacity: 0; // animation purposes only
 
         &__header {
             padding: 40px 0;
+            opacity: 0; // animation purposes only
 
             .row {
                 padding: 0 35px;
@@ -142,6 +141,7 @@ body {
             padding: 40px 0;
             position: relative;
             padding-top: 140px;
+            opacity: 0; // animation purposes only
             .row {
                 padding: 0 35px;
                 box-sizing: border-box;
@@ -200,6 +200,7 @@ body {
             position: absolute;
             bottom: 0;
             overflow: hidden;
+            opacity: 0; // animation purposes only
 
             .row {
                 padding: 0 35px;

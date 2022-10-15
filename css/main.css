@@ -30,6 +30,7 @@ body {
   width: 414px;
   height: 844px;
   position: relative;
+  overflow: hidden;
 }
 .main-container .preloader {
   height: inherit;
@@ -84,6 +85,7 @@ body {
 }
 .main-container .app__header {
   padding: 40px 0;
+  opacity: 0;
 }
 .main-container .app__header .row {
   padding: 0 35px;
@@ -124,6 +126,7 @@ body {
   padding: 40px 0;
   position: relative;
   padding-top: 140px;
+  opacity: 0;
 }
 .main-container .app__cta .row {
   padding: 0 35px;
@@ -170,6 +173,7 @@ body {
   position: absolute;
   bottom: 0;
   overflow: hidden;
+  opacity: 0;
 }
 .main-container .app__footer .row {
   padding: 0 35px;
