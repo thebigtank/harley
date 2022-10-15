@@ -183,6 +183,7 @@ body {
 .main-container .app__footer hr {
   margin: 0;
   margin-bottom: 40px;
+  opacity: 0.2;
 }
 .main-container .app__footer .slider {
   width: 600px;

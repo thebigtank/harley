@@ -19,37 +19,37 @@ export default function animatePreloader() {
         let _04 = preloader_block.querySelector('.images .img_04');
         let _05 = preloader_block.querySelector('.images .img_05');
 
-        // tl.fromTo(solid_bg, 
-        // {
-        //     y: 850
-        // },
-        // {
-        //     // ease: "power4.inOut",
-        //     duration: 1,
-        //     y: 0
-        // }, '+=0.3');
+        tl.fromTo(solid_bg, 
+        {
+            y: 850
+        },
+        {
+            // ease: "power4.inOut",
+            duration: 1,
+            y: 0
+        }, '+=0.3');
 
-        // tl.fromTo(title, 
-        // {
-        //     y: 50,
-        // },
-        // {
-        //     duration: 1.4,
-        //     y: 0
-        // },'+=0.2');
+        tl.fromTo(title, 
+        {
+            y: 50,
+        },
+        {
+            duration: 1.4,
+            y: 0
+        },'+=0.2');
 
-        // tl.to(solid_bg, 
-        // {
-        //     // ease: "power4.inOut",
-        //     y: -850,
-        //     duration: 1
-        // });
+        tl.to(solid_bg, 
+        {
+            // ease: "power4.inOut",
+            y: -850,
+            duration: 1
+        });
 
-        // tl.to(title,
-        // {
-        //     y: -50,
-        //     duration: 2
-        // }, '-=0.95');
+        tl.to(title,
+        {
+            y: -50,
+            duration: 2
+        }, '-=0.95');
 
 
 
@@ -65,69 +65,69 @@ export default function animatePreloader() {
         
 
         // Animated the images
-        // tl.fromTo(images,
-        // {
-        //     y: 850
-        // },
-        // {
-        //     y: 0
-        // }, '-=3');
+        tl.fromTo(images,
+        {
+            y: 850
+        },
+        {
+            y: 0
+        }, '-=3');
 
-        // tl.fromTo(_05, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_05, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
 
-        // tl.fromTo(_05,
-        // {
-        //     'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        // },
-        // {
-        //     'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-        //     duration: 1.5
-        // }, '-=1.3');
+        tl.fromTo(_05,
+        {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+        },
+        {
+            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            duration: 1.5
+        }, '-=1.3');
 
 
-        // tl.fromTo(_04, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_04, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
 
-        // tl.fromTo(_04,
-        // {
-        //     'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        // },
-        // {
-        //     'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-        //     duration: 1.5
-        // }, '-=0.3');
+        tl.fromTo(_04,
+        {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+        },
+        {
+            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            duration: 1.5
+        }, '-=0.3');
 
-        // tl.fromTo(_03, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_03, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
 
-        // tl.fromTo(_03,
-        // {
-        //     'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        // },
-        // {
-        //     'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-        //     duration: 1.5
-        // }, '-=0.3');
+        tl.fromTo(_03,
+        {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+        },
+        {
+            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            duration: 1.5
+        }, '-=0.3');
 
-        // tl.fromTo(_02, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_02, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
 
-        // tl.fromTo(_02,
-        // {
-        //     'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        // },
-        // {
-        //     'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-        //     duration: 1.5
-        // }, '-=0.3');
+        tl.fromTo(_02,
+        {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+        },
+        {
+            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            duration: 1.5
+        }, '-=0.3');
 
-        // tl.fromTo(_01, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_01, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
 
-        // tl.fromTo(_01,
-        // {
-        //     'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        // },
-        // {
-        //     'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-        //     duration: 1.5
-        // }, '-=0.3');
+        tl.fromTo(_01,
+        {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+        },
+        {
+            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            duration: 1.5
+        }, '-=0.3');
 
 
         // Animate the app header
@@ -196,15 +196,8 @@ export default function animatePreloader() {
         // Animate the footer
         let app_footer = app_screen.querySelector('.app__footer');
         let line = app_footer.querySelector('.row hr');
-
-        // tl.fromTo(line,
-        // {
-        //     x: -570
-        // },
-        // {
-        //     x: 0,
-        //     duration: .7,
-        // },'-=1.05');
+        let text_slider = app_footer.querySelector('.col .slider.texts');
+        let image_slider = app_footer.querySelectorAll('.col .slider.images .image');
 
         tl.fromTo(line, 
         {
@@ -212,13 +205,29 @@ export default function animatePreloader() {
         },
         {
             'clip-path': 'polygon(0px 100%, 100% 100%, 100% 0%, 0% 0%)',
-            duration: .9
+            duration: 1.25
         },'-=1.4');
 
+        tl.fromTo(text_slider, 
+        { 
+            x: 200, 
+            opacity: 0 
+        }, 
+        { 
+            x: 0, 
+            opacity: 1, 
+            duration: 1
+        },'-=1.4');
 
-
-
-
+        tl.fromTo(image_slider, 
+        {
+            'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
+        },
+        {
+            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            stagger: 0.2,
+            duration: .74
+        },'-=1');
 
 
     }
