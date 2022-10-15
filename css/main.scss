@@ -96,7 +96,7 @@ body {
 
         &__header {
             padding: 40px 0;
-            opacity: 0; // animation purposes only
+            // opacity: 0; // animation purposes only
 
             .row {
                 padding: 0 35px;
@@ -127,6 +127,7 @@ body {
                 flex-direction: column;
                 gap: 8px;
                 cursor: pointer;
+                overflow: hidden; // for animation purposes only
                 .line {
                     display: block;
                     height: 2px;
@@ -141,7 +142,7 @@ body {
             padding: 40px 0;
             position: relative;
             padding-top: 140px;
-            opacity: 0; // animation purposes only
+            // opacity: 0; // animation purposes only
             .row {
                 padding: 0 35px;
                 box-sizing: border-box;
@@ -150,13 +151,9 @@ body {
             .col {
                 .title {
                     text-transform: uppercase;
-                    font-size: 33px;
+                    font-size: 35px;
                     line-height: 46px;
                     margin-bottom: 26px;
-
-                    span {
-                        // add clip for gsap animation purposes
-                    }
                 }
 
                 .btn-group {

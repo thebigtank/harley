@@ -85,7 +85,6 @@ body {
 }
 .main-container .app__header {
   padding: 40px 0;
-  opacity: 0;
 }
 .main-container .app__header .row {
   padding: 0 35px;
@@ -114,6 +113,7 @@ body {
   flex-direction: column;
   gap: 8px;
   cursor: pointer;
+  overflow: hidden;
 }
 .main-container .app__header .hamburger .line {
   display: block;
@@ -126,7 +126,6 @@ body {
   padding: 40px 0;
   position: relative;
   padding-top: 140px;
-  opacity: 0;
 }
 .main-container .app__cta .row {
   padding: 0 35px;
@@ -134,7 +133,7 @@ body {
 }
 .main-container .app__cta .col .title {
   text-transform: uppercase;
-  font-size: 33px;
+  font-size: 35px;
   line-height: 46px;
   margin-bottom: 26px;
 }
