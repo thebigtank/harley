@@ -5,6 +5,7 @@ export default function animatePreloader() {
 
     if (content) {
 
+        let content = document.querySelector('.content');
         let preloader_block = document.querySelector('.preloader');
         let app_screen = document.querySelector('.app');
 
@@ -53,14 +54,14 @@ export default function animatePreloader() {
 
 
 
-        // bring the app-screen to the viewport
-        tl.fromTo(app_screen,
-        {
-            opacity: 0
-        },
-        {
-            opacity: 1,
-        }, '-=1');
+        
+        // tl.fromTo(app_screen,
+        // {
+        //     opacity: 0
+        // },
+        // {
+        //     opacity: 1,
+        // }, '-=1');
 
         
 
@@ -84,8 +85,8 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 1.5
-        }, '-=3.6');
+            duration: 1.3
+        }, '-=3.5');
         
         // Animate second card
 
@@ -98,7 +99,7 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 1
+            duration: 0.75
         }, '-=2.6');
         
         // Animate third card
@@ -112,8 +113,8 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 1
-        }, '-=2');
+            duration: 0.75
+        }, '-=1.9');
         
         // Animate fourth card
 
@@ -126,8 +127,8 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 1
-        }, '-=1.3');
+            duration: 0.75
+        }, '-=1.2');
         
         // Animate fifth card
 
@@ -140,8 +141,27 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 1
-        }, '-=0.8');
+            duration: 0.75
+            }, '-=0.7');
+        
+        // bring the app-screen to the viewport
+        tl.fromTo(app_screen,
+        {
+            opacity: 0
+        },
+        {
+            opacity: 1
+        }, '-=1');
+        
+        
+        // scale the content a bit bigger
+        tl.fromTo(content,
+        {
+            scale: 1
+        },
+        {
+            scale: 1.2
+        }, '-=0.4');
 
 
         // Animate the app header
