@@ -24,7 +24,7 @@ export default function animatePreloader() {
             y: 850
         },
         {
-            // ease: "power4.inOut",
+            ease: "power4.inOut",
             duration: 1,
             y: 0
         }, '+=0.3');
@@ -34,13 +34,13 @@ export default function animatePreloader() {
             y: 50,
         },
         {
-            duration: 1.4,
+            duration: 1,
             y: 0
-        },'+=0.2');
+        },'-=0.5');
 
         tl.to(solid_bg, 
         {
-            // ease: "power4.inOut",
+            ease: "power4.inOut",
             y: -850,
             duration: 1
         });
@@ -48,8 +48,8 @@ export default function animatePreloader() {
         tl.to(title,
         {
             y: -50,
-            duration: 2
-        }, '-=0.95');
+            duration: 4
+        }, '-=0.9');
 
 
 
@@ -60,20 +60,22 @@ export default function animatePreloader() {
         },
         {
             opacity: 1,
-        }, '-=0.3');
+        }, '-=1');
 
         
 
-        // Animated the images
+        // Animate the images
         tl.fromTo(images,
         {
-            y: 850
+            opacity: 0
         },
         {
-            y: 0
-        }, '-=3');
+            opacity: 1
+        }, '-=4.5');
 
-        tl.fromTo(_05, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        // Animate first card
+
+        tl.fromTo(_05, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=4.5');
 
         tl.fromTo(_05,
         {
@@ -81,11 +83,13 @@ export default function animatePreloader() {
         },
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            ease: "power4.inOut",
             duration: 1.5
-        }, '-=1.3');
+        }, '-=3.6');
+        
+        // Animate second card
 
-
-        tl.fromTo(_04, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_04, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=4');
 
         tl.fromTo(_04,
         {
@@ -93,10 +97,13 @@ export default function animatePreloader() {
         },
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            duration: 1.5
-        }, '-=0.3');
+            ease: "power4.inOut",
+            duration: 1
+        }, '-=2.6');
+        
+        // Animate third card
 
-        tl.fromTo(_03, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_03, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=3.2');
 
         tl.fromTo(_03,
         {
@@ -104,10 +111,13 @@ export default function animatePreloader() {
         },
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            duration: 1.5
-        }, '-=0.3');
+            ease: "power4.inOut",
+            duration: 1
+        }, '-=2');
+        
+        // Animate fourth card
 
-        tl.fromTo(_02, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_02, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=2.5');
 
         tl.fromTo(_02,
         {
@@ -115,10 +125,13 @@ export default function animatePreloader() {
         },
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            duration: 1.5
-        }, '-=0.3');
+            ease: "power4.inOut",
+            duration: 1
+        }, '-=1.3');
+        
+        // Animate fifth card
 
-        tl.fromTo(_01, {scale: 1.5},{scale: 1,duration: 2}, '-=2');
+        tl.fromTo(_01, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=1.8');
 
         tl.fromTo(_01,
         {
@@ -126,8 +139,9 @@ export default function animatePreloader() {
         },
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            duration: 1.5
-        }, '-=0.3');
+            ease: "power4.inOut",
+            duration: 1
+        }, '-=0.8');
 
 
         // Animate the app header

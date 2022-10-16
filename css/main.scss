@@ -10,7 +10,7 @@ body {
 .main-container {
     max-width: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 40%) minmax(0, 60%);
+    grid-template-columns: minmax(0, 35%) minmax(0, 65%);
 
     .pix {
         overflow: hidden;
@@ -164,7 +164,6 @@ body {
                         display: block;
                         text-transform: uppercase;
                         text-decoration: none;
-                        // padding: 26px;
                         color: $dark-02;
                         font-size: 18px;
                         font-weight: 500;
