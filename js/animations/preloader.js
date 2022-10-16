@@ -26,9 +26,9 @@ export default function animatePreloader() {
         },
         {
             ease: "power4.inOut",
-            duration: 1,
+            duration: 1.2,
             y: 0
-        }, '+=0.3');
+        });
 
         tl.fromTo(title, 
         {
@@ -50,19 +50,16 @@ export default function animatePreloader() {
         {
             y: -50,
             duration: 4
-        }, '-=0.9');
-
-
-
+            }, '-=0.9');
         
-        // tl.fromTo(app_screen,
-        // {
-        //     opacity: 0
-        // },
-        // {
-        //     opacity: 1,
-        // }, '-=1');
-
+        
+        tl.fromTo(app_screen,
+        {
+            opacity: 0
+        },
+        {
+            opacity: 1
+        }, '-=1');
         
 
         // Animate the images
@@ -72,10 +69,11 @@ export default function animatePreloader() {
         },
         {
             opacity: 1
-        }, '-=4.5');
+            }, '-=4.5');
+        
+        
 
         // Animate first card
-
         tl.fromTo(_05, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=4.5');
 
         tl.fromTo(_05,
@@ -85,11 +83,12 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 1.3
-        }, '-=3.5');
+            duration: 1.4
+        }, '-=3.8');
+        
+        
         
         // Animate second card
-
         tl.fromTo(_04, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=4');
 
         tl.fromTo(_04,
@@ -99,12 +98,13 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 0.75
-        }, '-=2.6');
+            duration: 0.8
+        }, '-=3');
         
-        // Animate third card
 
-        tl.fromTo(_03, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=3.2');
+
+        // Animate third card
+        tl.fromTo(_03, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=3.5');
 
         tl.fromTo(_03,
         {
@@ -113,12 +113,13 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 0.75
-        }, '-=1.9');
+            duration: 1.4
+        }, '-=2.8');
         
-        // Animate fourth card
 
-        tl.fromTo(_02, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=2.5');
+
+        // Animate fourth card
+        tl.fromTo(_02, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=3');
 
         tl.fromTo(_02,
         {
@@ -127,12 +128,14 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 0.75
-        }, '-=1.2');
+            duration: 1.2
+        }, '-=2.2');
         
-        // Animate fifth card
 
-        tl.fromTo(_01, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=1.8');
+
+
+        // Animate fifth card
+        tl.fromTo(_01, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=2.45');
 
         tl.fromTo(_01,
         {
@@ -141,17 +144,19 @@ export default function animatePreloader() {
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
             ease: "power4.inOut",
-            duration: 0.75
-            }, '-=0.7');
+            duration: 1
+        }, '-=1.5');
+        
+        
         
         // bring the app-screen to the viewport
-        tl.fromTo(app_screen,
-        {
-            opacity: 0
-        },
-        {
-            opacity: 1
-        }, '-=1');
+        // tl.fromTo(app_screen,
+        // {
+        //     opacity: 0
+        // },
+        // {
+        //     opacity: 1
+        // }, '-=1');
         
         
         // scale the content a bit bigger
@@ -160,8 +165,9 @@ export default function animatePreloader() {
             scale: 1
         },
         {
-            scale: 1.2
-        }, '-=0.4');
+            scale: 1.2,
+            duration: 1
+        }, '-=1.2');
 
 
         // Animate the app header
