@@ -7,251 +7,236 @@ body {
     font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 
-.main-container {
+
+.container {
+    height: 100vh;
     max-width: 100%;
-    display: grid;
-    grid-template-columns: minmax(0, 35%) minmax(0, 65%);
+    background-color: $dark-00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .pix {
-        overflow: hidden;
-        height: 100vh;
+.content {
+    max-width: 414px;
+    width: 414px;
+    height: 844px;
+    position: relative;
+    overflow: hidden;
+}
 
+.preloader {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    h1 {
+        position: absolute;
+        z-index: 3;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 26px;
+        font-weight: 600;
+        overflow: hidden; // for animation purposes only
+        span {
+            display: block;
+        }
+    }
+    
+    .solid-bg {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        height: inherit;
+        width: inherit;
+        background-color: $orange-red;
+    }
+
+    .images {
+        position: absolute;
+        z-index: 1;
+        height: inherit;
+        width: inherit;
+        
         img {
+            position: absolute;
             height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center;
         }
     }
+}
 
-    .container {
-        background-color: $dark-00;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.app {
+    background-color: $dark-01;
+    color: #fff;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    // opacity: 0; // animation purposes only
 
-    .content {
-        max-width: 414px;
-        width: 414px;
-        height: 844px;
-        position: relative;
-        overflow: hidden;
-    }
-
-    .preloader {
-        height: inherit;
-        width: inherit;
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-
-        h1 {
-            position: absolute;
-            z-index: 3;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 26px;
-            font-weight: 600;
-            overflow: hidden; // for animation purposes only
-            span {
-                display: block;
-            }
-        }
-        
-        .solid-bg {
-            position: absolute;
-            top: 0;
-            z-index: 2;
-            height: inherit;
-            width: inherit;
-            background-color: $orange-red;
-        }
-
-        .images {
-            position: absolute;
-            z-index: 1;
-            height: inherit;
-            width: inherit;
-            
-            img {
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                object-position: center;
-            }
-        }
-    }
-
-    .app {
-        background-color: $dark-01;
-        color: #fff;
-        height: inherit;
-        width: inherit;
-        position: absolute;
+    &__header {
+        padding: 40px 0;
         // opacity: 0; // animation purposes only
 
-        &__header {
-            padding: 40px 0;
-            // opacity: 0; // animation purposes only
+        .row {
+            padding: 0 35px;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-            .row {
-                padding: 0 35px;
-                box-sizing: border-box;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+        .logo {
+            display: block;
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: 500;
+        }
 
-            .logo {
+        .hamburger {
+            border: none;
+            background: none;
+            padding: 0;
+            height: 35px;
+            width: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 8px;
+            cursor: pointer;
+            overflow: hidden; // for animation purposes only
+            .line {
                 display: block;
-                color: #fff;
+                height: 2px;
+                width: 100%;
+                background-color: #fff;
+            }
+        }
+    }
+
+    &__cta {
+        width: inherit;
+        padding: 40px 0;
+        position: relative;
+        padding-top: 140px;
+        // opacity: 0; // animation purposes only
+        .row {
+            padding: 0 35px;
+            box-sizing: border-box;
+        }
+
+        .col {
+            .title {
                 text-transform: uppercase;
-                text-decoration: none;
-                font-size: 24px;
-                font-weight: 500;
+                font-size: 35px;
+                line-height: 46px;
+                margin-bottom: 26px;
             }
 
-            .hamburger {
-                border: none;
-                background: none;
-                padding: 0;
-                height: 35px;
-                width: 45px;
+            .btn-group {
                 display: flex;
                 align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                gap: 8px;
-                cursor: pointer;
-                overflow: hidden; // for animation purposes only
-                .line {
+                gap: 12px;
+                .btn {
                     display: block;
-                    height: 2px;
-                    width: 100%;
-                    background-color: #fff;
-                }
-            }
-        }
-
-        &__cta {
-            width: inherit;
-            padding: 40px 0;
-            position: relative;
-            padding-top: 140px;
-            // opacity: 0; // animation purposes only
-            .row {
-                padding: 0 35px;
-                box-sizing: border-box;
-            }
-
-            .col {
-                .title {
                     text-transform: uppercase;
-                    font-size: 35px;
-                    line-height: 46px;
-                    margin-bottom: 26px;
-                }
-
-                .btn-group {
+                    text-decoration: none;
+                    color: $dark-02;
+                    font-size: 18px;
+                    font-weight: 500;
                     display: flex;
+                    justify-content: center;
                     align-items: center;
-                    gap: 12px;
-                    .btn {
-                        display: block;
-                        text-transform: uppercase;
-                        text-decoration: none;
-                        color: $dark-02;
-                        font-size: 18px;
-                        font-weight: 500;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
 
-                        &.primary {
-                            background-color: #fff;
-                            width: 185px;
-                            height: 75px;
-                        }
+                    &.primary {
+                        background-color: #fff;
+                        width: 185px;
+                        height: 75px;
+                    }
 
-                        &.icon {
-                            background-color: $dark-02;
-                            color: #fff;
-                            width: 75px;
-                            height: 75px;
-                        }
+                    &.icon {
+                        background-color: $dark-02;
+                        color: #fff;
+                        width: 75px;
+                        height: 75px;
                     }
-                    svg {
-                        height: 20px;
-                    }
+                }
+                svg {
+                    height: 20px;
                 }
             }
         }
+    }
 
-        &__footer {
-            width: inherit;
-            position: absolute;
-            bottom: 0;
-            overflow: hidden;
-            // opacity: 0; // animation purposes only
+    &__footer {
+        width: inherit;
+        position: absolute;
+        bottom: 0;
+        overflow: hidden;
+        // opacity: 0; // animation purposes only
 
-            .row {
-                padding: 0 35px;
-                box-sizing: border-box;
+        .row {
+            padding: 0 35px;
+            box-sizing: border-box;
 
-                &:last-child {
-                    padding: 0;
-                }
+            &:last-child {
+                padding: 0;
             }
+        }
 
 
-            hr {
-                margin: 0;
-                margin-bottom: 40px;
-                opacity: 0.2;
-            }
+        hr {
+            margin: 0;
+            margin-bottom: 40px;
+            opacity: 0.2;
+        }
 
-            .slider {
-                width: 600px;
-                display: flex;
-                gap: 25px;
-                margin-bottom: 40px;
-                .item {
-                    max-width: 155px;
-                    text-transform: uppercase;
-                    font-size: 16px;
-                    line-height: 26px;
-                    opacity: 0.5;
+        .slider {
+            width: 600px;
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+            .item {
+                max-width: 155px;
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 26px;
+                opacity: 0.5;
 
-                    p {
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        overflow: hidden;
-                    }
-
-                    &.active {
-                        opacity: 1;
-                    }
-                }
-
-                &.images {
-                    margin-bottom: 0;
-                    gap: 0;
-                }
-
-                .image {
+                p {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                     overflow: hidden;
-                    width: 130px;
-                    height: 130px;
-                    img {
-                        height: 100%;
-                        width: 100%;
-                        object-fit: cover;
-                        object-position: center;
-                    }
+                }
+
+                &.active {
+                    opacity: 1;
+                }
+            }
+
+            &.images {
+                margin-bottom: 0;
+                gap: 0;
+            }
+
+            .image {
+                overflow: hidden;
+                width: 130px;
+                height: 130px;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
                 }
             }
         }

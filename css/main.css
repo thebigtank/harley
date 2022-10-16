@@ -2,37 +2,24 @@ body {
   font-family: "Fira Sans Extra Condensed", sans-serif;
 }
 
-.main-container {
-  max-width: 100%;
-  display: grid;
-  grid-template-columns: minmax(0, 35%) minmax(0, 65%);
-}
-.main-container .pix {
-  overflow: hidden;
+.container {
   height: 100vh;
-}
-.main-container .pix img {
-  height: 100%;
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-.main-container .container {
+  max-width: 100%;
   background-color: #000308;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main-container .content {
+
+.content {
   max-width: 414px;
   width: 414px;
   height: 844px;
   position: relative;
   overflow: hidden;
 }
-.main-container .preloader {
+
+.preloader {
   height: inherit;
   width: inherit;
   position: absolute;
@@ -41,7 +28,7 @@ body {
   align-items: center;
   overflow: hidden;
 }
-.main-container .preloader h1 {
+.preloader h1 {
   position: absolute;
   z-index: 3;
   color: #fff;
@@ -50,10 +37,10 @@ body {
   font-weight: 600;
   overflow: hidden;
 }
-.main-container .preloader h1 span {
+.preloader h1 span {
   display: block;
 }
-.main-container .preloader .solid-bg {
+.preloader .solid-bg {
   position: absolute;
   top: 0;
   z-index: 2;
@@ -61,13 +48,13 @@ body {
   width: inherit;
   background-color: #F44336;
 }
-.main-container .preloader .images {
+.preloader .images {
   position: absolute;
   z-index: 1;
   height: inherit;
   width: inherit;
 }
-.main-container .preloader .images img {
+.preloader .images img {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -76,24 +63,25 @@ body {
   -o-object-position: center;
      object-position: center;
 }
-.main-container .app {
+
+.app {
   background-color: #15191e;
   color: #fff;
   height: inherit;
   width: inherit;
   position: absolute;
 }
-.main-container .app__header {
+.app__header {
   padding: 40px 0;
 }
-.main-container .app__header .row {
+.app__header .row {
   padding: 0 35px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.main-container .app__header .logo {
+.app__header .logo {
   display: block;
   color: #fff;
   text-transform: uppercase;
@@ -101,7 +89,7 @@ body {
   font-size: 24px;
   font-weight: 500;
 }
-.main-container .app__header .hamburger {
+.app__header .hamburger {
   border: none;
   background: none;
   padding: 0;
@@ -115,34 +103,34 @@ body {
   cursor: pointer;
   overflow: hidden;
 }
-.main-container .app__header .hamburger .line {
+.app__header .hamburger .line {
   display: block;
   height: 2px;
   width: 100%;
   background-color: #fff;
 }
-.main-container .app__cta {
+.app__cta {
   width: inherit;
   padding: 40px 0;
   position: relative;
   padding-top: 140px;
 }
-.main-container .app__cta .row {
+.app__cta .row {
   padding: 0 35px;
   box-sizing: border-box;
 }
-.main-container .app__cta .col .title {
+.app__cta .col .title {
   text-transform: uppercase;
   font-size: 35px;
   line-height: 46px;
   margin-bottom: 26px;
 }
-.main-container .app__cta .col .btn-group {
+.app__cta .col .btn-group {
   display: flex;
   align-items: center;
   gap: 12px;
 }
-.main-container .app__cta .col .btn-group .btn {
+.app__cta .col .btn-group .btn {
   display: block;
   text-transform: uppercase;
   text-decoration: none;
@@ -153,69 +141,69 @@ body {
   justify-content: center;
   align-items: center;
 }
-.main-container .app__cta .col .btn-group .btn.primary {
+.app__cta .col .btn-group .btn.primary {
   background-color: #fff;
   width: 185px;
   height: 75px;
 }
-.main-container .app__cta .col .btn-group .btn.icon {
+.app__cta .col .btn-group .btn.icon {
   background-color: #2a313a;
   color: #fff;
   width: 75px;
   height: 75px;
 }
-.main-container .app__cta .col .btn-group svg {
+.app__cta .col .btn-group svg {
   height: 20px;
 }
-.main-container .app__footer {
+.app__footer {
   width: inherit;
   position: absolute;
   bottom: 0;
   overflow: hidden;
 }
-.main-container .app__footer .row {
+.app__footer .row {
   padding: 0 35px;
   box-sizing: border-box;
 }
-.main-container .app__footer .row:last-child {
+.app__footer .row:last-child {
   padding: 0;
 }
-.main-container .app__footer hr {
+.app__footer hr {
   margin: 0;
   margin-bottom: 40px;
   opacity: 0.2;
 }
-.main-container .app__footer .slider {
+.app__footer .slider {
   width: 600px;
   display: flex;
   gap: 25px;
   margin-bottom: 40px;
 }
-.main-container .app__footer .slider .item {
+.app__footer .slider .item {
   max-width: 155px;
   text-transform: uppercase;
   font-size: 16px;
   line-height: 26px;
   opacity: 0.5;
 }
-.main-container .app__footer .slider .item p {
+.app__footer .slider .item p {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.main-container .app__footer .slider .item.active {
+.app__footer .slider .item.active {
   opacity: 1;
 }
-.main-container .app__footer .slider.images {
+.app__footer .slider.images {
   margin-bottom: 0;
   gap: 0;
 }
-.main-container .app__footer .slider .image {
+.app__footer .slider .image {
   overflow: hidden;
   width: 130px;
   height: 130px;
 }
-.main-container .app__footer .slider .image img {
+.app__footer .slider .image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
