@@ -63,6 +63,21 @@ body {
   -o-object-position: center;
      object-position: center;
 }
+.preloader .images img:nth-child(1) {
+  z-index: 5;
+}
+.preloader .images img:nth-child(2) {
+  z-index: 4;
+}
+.preloader .images img:nth-child(3) {
+  z-index: 3;
+}
+.preloader .images img:nth-child(4) {
+  z-index: 2;
+}
+.preloader .images img:nth-child(5) {
+  z-index: 1;
+}
 
 .app {
   background-color: #15191e;
@@ -198,12 +213,12 @@ body {
   margin-bottom: 0;
   gap: 0;
 }
-.app__footer .slider .image {
+.app__footer .slider.images .image {
   overflow: hidden;
   width: 130px;
   height: 130px;
 }
-.app__footer .slider .image img {
+.app__footer .slider.images .image img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;

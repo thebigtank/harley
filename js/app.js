@@ -11,16 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
         let solid_bg = preloader.querySelector('.solid-bg');
         let title = preloader.querySelector('h1 span');
         let images = preloader.querySelector('.images');
+        let all_images = preloader.querySelectorAll('.images img');
 
-
-        let _01 = preloader.querySelector('.images .img_01');
-        let _02 = preloader.querySelector('.images .img_02');
-        let _03 = preloader.querySelector('.images .img_03');
-        let _04 = preloader.querySelector('.images .img_04');
-        let _05 = preloader.querySelector('.images .img_05');
-
-
-        // 01. Scale down the 
+        // Scale down the content area
         tl.fromTo(content,
         {
             scale: 1
@@ -30,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             duration: 1
         });
 
+        // Animate the orange background from bottom to top
         tl.fromTo(solid_bg,
         {
             y: 850
@@ -38,8 +32,9 @@ document.addEventListener("DOMContentLoaded", function () {
             ease: "power4.inOut",
             duration: 1.2,
             y: 0
-        }, '+=0.1');
+        }, '-=0.1');
 
+        // Animate the app title unto view
         tl.fromTo(title, 
         {
             y: 50,
@@ -49,6 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
             y: 0
         },'-=0.5');
 
+        // Animate the orange background out of view
         tl.to(solid_bg, 
         {
             ease: "power4.inOut",
@@ -56,123 +52,64 @@ document.addEventListener("DOMContentLoaded", function () {
             duration: 1
         });
 
+        // Animate the app title out of view
         tl.to(title,
         {
             y: -50,
             duration: 4
         }, '-=0.9');
-        
-        // bring the app-screen to the viewport
-        tl.fromTo(app_screen,
-        {
-            opacity: 0
-        },
-        {
-            opacity: 1
-        }, '-=1');
-        
 
-        // Animate the images
+        // Animate the images unto view
         tl.fromTo(images,
         {
-            opacity: 0
+            autoAlpha: 0
         },
         {
-            opacity: 1
+            autoAlpha: 1
         }, '-=4.5');
-        
-        
 
-        // Animate first card
-        tl.fromTo(_05, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=4.5');
+        // Animating the cards, first scale the cards from large to original size,
+        // then clip the card out of view from bottom to top. Make sure to stagger them.
 
-        tl.fromTo(_05,
+        tl.fromTo(all_images,
         {
             'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            scale: 1.5
         },
         {
+            scale: 1,
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            ease: "power4.inOut",
-            duration: 1.4
-        }, '-=3.8');
-        
-        
-        
-        // Animate second card
-        tl.fromTo(_04, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=4');
+            ease: "expo.inOut",
+            duration: 2,
+            stagger: 0.5
+        }, '-=4');
 
-        tl.fromTo(_04,
+        
+        // Bring the app-screen to the viewport but remains in the background
+        tl.fromTo(app_screen,
         {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            autoAlpha: 0
         },
         {
-            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            ease: "power4.inOut",
-            duration: 0.8
+            autoAlpha: 1
         }, '-=3');
         
-
-
-        // Animate third card
-        tl.fromTo(_03, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=3.5');
-
-        tl.fromTo(_03,
-        {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        },
-        {
-            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            ease: "power4.inOut",
-            duration: 1.4
-        }, '-=2.8');
         
-
-
-        // Animate fourth card
-        tl.fromTo(_02, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=3');
-
-        tl.fromTo(_02,
-        {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        },
-        {
-            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            ease: "power4.inOut",
-            duration: 1.2
-        }, '-=2.2');
-        
-
-
-
-        // Animate fifth card
-        tl.fromTo(_01, {scale: 1.5},{scale: 1, ease: "power4.inOut", duration: 2}, '-=2.45');
-
-        tl.fromTo(_01,
-        {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-        },
-        {
-            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
-            ease: "power4.inOut",
-            duration: 1
-        }, '-=1.5');
-        
-        
-        
-        // scale the content a bit bigger
+        // Scale the content area back to original size, this has to happen
+        // as the last card is clipping out of view
         tl.to(content,
         {
             scale: 1,
             duration: 1
-        }, '-=1.2');
+        }, '-=1');
 
 
         // Animate the app header
         let app_header = app_screen.querySelector('.app__header');
         let logo = app_header.querySelector('.col .logo');
-        let hamburger_line_1 = app_header.querySelectorAll('.col .hamburger .line_1');
-        let hamburger_line_2 = app_header.querySelectorAll('.col .hamburger .line_2');
+        let hamburger = app_header.querySelectorAll('.col .hamburger .line');
 
+        // Clip the logo into view from top to bottom
         tl.fromTo(logo, 
         {
             'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
@@ -180,19 +117,25 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
             duration: .74
-        },'+=0.2');
+        },'-=0.3');
         
-
-        tl.fromTo(hamburger_line_1, { x: -45 }, { x: 0, duration: .8 },'-=0.6');
-        tl.fromTo(hamburger_line_2, { x: -45 }, { x: 0, duration: .8 },'-=0.55');
+        // Animate the hamburgers, both has to be from left to right and needs to stagger.
+        tl.fromTo(hamburger, 
+        { 
+            x: -45 
+        }, 
+        { 
+            x: 0, 
+            duration: .8,
+            stagger: 0.2
+        },'-=0.5');
 
 
         // Animate the cta
         let app_cta = app_screen.querySelector('.app__cta');
         let cta_title = app_cta.querySelectorAll('.col .title');
         let cta_title_items = app_cta.querySelectorAll('.col .title span');
-        let btn_primary = app_cta.querySelector('.btn-group .btn.primary');
-        let btn_icon = app_cta.querySelector('.btn-group .btn.icon');
+        let btns = app_cta.querySelectorAll('.btn-group .btn');
 
         tl.fromTo(cta_title, 
         {
@@ -212,23 +155,16 @@ document.addEventListener("DOMContentLoaded", function () {
             duration: .7
         },'-=1.05');
 
-        tl.fromTo(btn_primary, 
+        tl.fromTo(btns, 
         {
             'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
         },
         {
             'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-            duration: .74
+            duration: .74,
+            // ease: "power4.out",
+            stagger: 0.2
         },'-=0.7');
-
-        tl.fromTo(btn_icon, 
-        {
-            'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
-        },
-        {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-            duration: .74
-        },'-=0.4');
 
         // Animate the footer
         let app_footer = app_screen.querySelector('.app__footer');
@@ -248,11 +184,11 @@ document.addEventListener("DOMContentLoaded", function () {
         tl.fromTo(text_slider, 
         { 
             x: 200, 
-            opacity: 0 
+            autoAlpha: 0 
         }, 
         { 
             x: 0, 
-            opacity: 1, 
+            autoAlpha: 1, 
             duration: 1
         },'-=1.4');
 
@@ -269,3 +205,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 });
+
+// Positive values always take time
+// The small the negative value the more it delays.
+// The higher the negative value the quicker it animates.

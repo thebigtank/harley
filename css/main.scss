@@ -69,6 +69,17 @@ body {
             object-fit: cover;
             object-position: center;
         }
+
+        // create the map
+        // key is the position of the child
+        // value is assigned to the child
+        $index-order: (1:5, 2:4, 3:3, 4:2, 5:1);
+
+        @each $key, $value in $index-order {
+            img:nth-child(#{$key}) {
+                z-index: $value;
+            }
+        }
     }
 }
 
@@ -226,19 +237,19 @@ body {
             &.images {
                 margin-bottom: 0;
                 gap: 0;
-            }
-
-            .image {
-                overflow: hidden;
-                width: 130px;
-                height: 130px;
-                img {
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    object-position: center;
+                .image {
+                    overflow: hidden;
+                    width: 130px;
+                    height: 130px;
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
                 }
             }
+
         }
     }
 }
