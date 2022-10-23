@@ -4,24 +4,17 @@ $dark-02: #2a313a;
 $orange-red: #F44336;
 
 body {
-    font-family: 'Fira Sans Extra Condensed', sans-serif;
-}
-
-
-.container {
-    height: 100vh;
-    max-width: 100%;
     background-color: $dark-00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: 'Fira Sans Extra Condensed', sans-serif;
 }
 
 .content {
     max-width: 414px;
     width: 414px;
     height: 844px;
-    position: relative;
+    position: relative;  
+    margin: auto;
+    margin-top: 120px;
     overflow: hidden;
 }
 

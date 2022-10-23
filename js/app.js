@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     let tl = gsap.timeline({});
 
-    let content = document.querySelector('.container .content');
+    let content = document.querySelector('.content');
 
     if (content) {
 
@@ -73,12 +73,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tl.fromTo(all_images,
         {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0 0 0px 0)',
             scale: 1.5
         },
         {
             scale: 1,
-            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0 0 1000px 0)',
             ease: "expo.inOut",
             duration: 2,
             stagger: 0.5
@@ -112,10 +112,10 @@ document.addEventListener("DOMContentLoaded", function () {
         // Clip the logo into view from top to bottom
         tl.fromTo(logo, 
         {
-            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0 0 24px 0)',
         },
         {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0 0 0px 0)',
             duration: .74
         },'-=0.3');
         
@@ -148,19 +148,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tl.fromTo(cta_title_items, 
         {
-            'clip-path': 'polygon(0px 0%, 100% 0%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0 0 80px 0)',
         },
         {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0 0 0px 0)',
             duration: .7
         },'-=1.05');
 
         tl.fromTo(btns, 
         {
-            'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
+            'clip-path': 'inset(80px 0 0 0)',
         },
         {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0px 0 0 0)',
             duration: .74,
             // ease: "power4.out",
             stagger: 0.2
@@ -174,10 +174,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tl.fromTo(line, 
         {
-            'clip-path': 'polygon(0% 100%, 0% 100%, 0% 0%, 0% 0%)',
+            'clip-path': 'inset(0 420px 0 0)',
         },
         {
-            'clip-path': 'polygon(0px 100%, 100% 100%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0 0px 0 0)',
             duration: 1.25
         },'-=1.4');
 
@@ -194,10 +194,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         tl.fromTo(image_slider, 
         {
-            'clip-path': 'polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)',
+            'clip-path': 'inset(130px 0 0 0)',
         },
         {
-            'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+            'clip-path': 'inset(0px 0 0 0)',
             stagger: 0.2,
             duration: .74
         },'-=1');
